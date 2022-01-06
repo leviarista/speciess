@@ -2,4 +2,6 @@
     /* Box shadows */
     --box-shadow-blur: 5px;
     --box-shadow-spread: 0px;
+    /* Border */
+    --border-radius: 7px;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import githubLogo from '../../public/images/github-logo.svg';
+import githubLogo from '../../public/images/github-logo-white.svg';
 
 function Footer() {
     return (

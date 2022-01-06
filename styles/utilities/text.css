@@ -1,4 +1,7 @@
-.text-highlight {
-    color: var(--jungle-green) !important;
-    font-weight: 500;
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-center{
+    text-align: center;
 }

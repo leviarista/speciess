@@ -4,6 +4,7 @@ import Image from 'next/image'
 import logo from '../../public/images/speciess-logo.svg';
 import titleLogo from '../../public/images/speciess-title-logo.svg';
 import GitHubCorner from './GitHubCorner';
+import githubLogo from '../../public/images/github-logo.svg';
 
 function NavBar() {
     const toogleNav = () => {
@@ -56,13 +57,13 @@ function NavBar() {
                         CONTACT
                     </Link>
                 </li>
-                <li className="hidden-sm">
-                    <a href="https://github.com/leviarista/eco-stats-peru" target="_blank" rel="noopenner noreferrer" className="show-xs" aria-label="View source on GitHub">
-                        {/* <img src={githubLogo} alt="GitHub Logo" /> GitHub */}
+                <li className="hidden-md">
+                    <a href="https://github.com/leviarista/eco-stats-peru" target="_blank" rel="noopenner noreferrer" aria-label="View source on GitHub">
+                        <Image src={githubLogo} alt="GitHub Logo" /> GitHub
                     </a>
                 </li>
             </ul>
-            <a href="https://github.com/leviarista/eco-stats-peru" target="_blank" rel="noopenner noreferrer" className="github-corner hidden-xs" aria-label="View source on GitHub">
+            <a href="https://github.com/leviarista/eco-stats-peru" target="_blank" rel="noopenner noreferrer" className="github-corner" aria-label="View source on GitHub">
                 <GitHubCorner />
             </a>
             <a href="#" className="icon" onClick={toogleNav}>
