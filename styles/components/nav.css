@@ -1,0 +1,99 @@
+.nav {
+    display: flex;
+    box-shadow: 0px 2px var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+}
+
+.nav .logo-container {
+    filter: drop-shadow(1px 1px var(--box-shadow-blur) var(--box-shadow-color));
+}
+
+.nav .logo {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    display: block;
+    background-color: white;
+    padding: 20px 30px 30px 20px;
+    clip-path: ellipse(51% 44% at 0% 13%);
+}
+
+.nav .title-logo{
+    min-width: 200px !important;
+}
+
+.nav ul {
+    width: 100%;
+    height: 55px;
+    margin: 0;
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav ul li a {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.nav .icon {
+    display: none;
+    width: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav {
+        width: 100%;
+        height: 55px;
+        display: block;
+    }
+    .nav .logo-container {
+        filter: none;
+    }
+    .nav .logo {
+        width: 55px;
+        height: 55px;
+        padding: 5px;
+        box-shadow: none;
+        border-bottom-right-radius: 0;
+        clip-path: none;
+    }
+    .nav .title-logo {
+        display: none;
+    }
+    .nav .icon {
+        width: 50px;
+        height: 55px;
+        float: right;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav ul {
+        display: none;
+    }
+    /* Display responsive nav */
+    .nav.responsive {
+        width: 100%;
+    }
+    .nav.responsive ul {
+        height: auto;
+        position: absolute;
+        top: 55px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        margin-left: 0;
+        padding: 25px;
+        background-color: white;
+        box-shadow: 0px 2px var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+        z-index: 100;
+    }
+}

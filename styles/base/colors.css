@@ -1,0 +1,67 @@
+:root {
+    /* ***************** Colors ***************** */
+    /* Basic */
+    --black: #000000;
+    --white: #ffffff;
+    --gallery: #f0f0f0;
+    --silver: #c8c8c8;
+    --cod-gray: #090909;
+    --black-o-25: rgba(143, 143, 143, 0.5);
+    /* Main */
+    --fun-green: #007745;
+    --endeavour: #0069b6;
+    /* Danger level colors */
+    --pastel-green: #76d776;
+    --saffron: #f1c33a;
+    --wild-watermelon: #ff6584;
+
+    /* ***************** Categories ***************** */
+    --primary: var(--endeavour);
+    --secondary: var(--cod-gray);
+    --danger: var(--wild-watermelon);
+    /* Text */
+    --text-color: var(--black);
+    --text-light-color: var(--white);
+    --text-grey-color: var(--silver);
+    /* Headings */
+    --headings-color: var(--black);
+    --headings-light-color: var(--white);
+    /* Links */
+    --links-color: var(--endeavour);
+    /* Background */
+    --bg-default: var(--gallery);
+    --bg-light: var(--white);
+    --bg-dark: var(--cod-gray);
+    /* Borders */
+    --border-color: var(--silver);
+    /* Box shadows */
+    --box-shadow-color: var(--black-o-25);
+    
+    /* ***************** IUCN Red List categories ***************** */
+    /* Extinct */
+    --EX: var(--black);
+    /* Extinct in the Wild */
+    --EW: #542344 ;
+    /* Regionally Extinct */
+    --RE: #9B4F96 ;
+    /* Critically Endangered */
+    --CR: var(--wild-watermelon) ;
+    /* Endangered */
+    --EN: #ff8b51 ;
+    /* Vulnerable */
+    --VU: var(--saffron) ;
+    /* Conservation Dependent */
+    --CD: #76BBD9 ;
+    /* Near threatened */
+    --NT: var(--pastel-green) ;
+    /* Least Concern */
+    --LC: #019393 ;
+    /* Data Deficient */
+    --DD: #D1D1C6 ;
+    /* Not Applicable */
+    --NA: #C1B5A5 ;
+    /* Not Evaluated */
+    --NE:  var(--white) ;
+}
+
+/* Color names from: https://chir.ag/projects/name-that-color */

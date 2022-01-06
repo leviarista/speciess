@@ -1,0 +1,5 @@
+:root {
+    /* Box shadows */
+    --box-shadow-blur: 5px;
+    --box-shadow-spread: 0px;
+}

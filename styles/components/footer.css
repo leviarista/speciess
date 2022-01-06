@@ -1,0 +1,27 @@
+footer{
+    --footer-height: 35px;
+}
+
+.footer {
+    position: relative;
+    width: fit-content;
+    height: var(--footer-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-light);
+    box-shadow: 0px -2px var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+    border-radius: 0px 15px 0px 0px;
+}
+
+.footer span {
+    padding: 0 20px;
+}
+.footer a {
+    height: var(--footer-height);
+    width: var(--footer-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-dark);
+}
