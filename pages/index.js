@@ -1,27 +1,39 @@
 import Image from 'next/image'
-import styles from '../styles/modules/Home.module.css'
 import Meta from '/components/shared/Meta'
+import Button from '/components/shared/Button'
+import styles from '../styles/modules/Home.module.css'
 import logo from '../public/images/speciess-logo.svg';
 
 export default function Home() {
   return (
-    <div>
+    <div className='container'>
       <Meta />
 
-      <main className="container text-center">
-        <header className={styles.header} >
-          <Image src={logo} alt="logo" />
-          <h1 className={styles.titleLogo}>
-            SPE<span className="text-primary">C</span>IE<span className="text-primary">SS</span>
-          </h1>
-          CSS art of endangered species
-        </header>
-
-        <section className={styles.welcomeCard}>
-          <b>What is it?</b>
-          <p>
-          Here you can create, explore and share CSS art about endangered species (from the IUCN Red List) and so spread raise awareness about it.
-          </p>
+      <header className={"text-center " + styles.header} >
+        <Image src={logo} alt="logo" />
+        <h1 className={styles.titleLogo}>
+          SPE<span className="text-primary">C</span>IE<span className="text-primary">SS</span>
+        </h1>
+        CSS art of endangered species
+      </header>
+      <main className="text-center">
+        <section>
+          <div className={styles.welcomeCard}>
+            <b>What is it?</b>
+            <p>
+              Here you can create, explore and share CSS art about endangered species (from the IUCN Red List) and so spread raise awareness about it.
+            </p>
+          </div>
+          <div className={styles.buttonsContainer}>
+            <Button href="/upload"
+              text="Get Started"
+              className="button-secondary text-uppercase"
+            />
+            <Button href="/explore"
+              text="Explore"
+              className="button-primary text-uppercase"
+            />
+          </div>
         </section>
         {/* <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>

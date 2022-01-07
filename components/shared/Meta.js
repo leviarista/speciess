@@ -5,7 +5,7 @@ function Meta(props) {
     const { title, description } = props;
     return (
         <Head>
-            <title>SPECIESS {title && " - " + title}</title>
+            <title>SPECIESS {title && " | " + title}</title>
             <meta name="description" content={description ?? "CSS art of endangered species"} />
             <link rel="icon" href="/favicon.ico" />
         </Head>

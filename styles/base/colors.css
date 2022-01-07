@@ -6,7 +6,8 @@
     --gallery: #f0f0f0;
     --silver: #c8c8c8;
     --cod-gray: #090909;
-    --black-o-25: rgba(143, 143, 143, 0.5);
+    --black-o-50: rgba(143, 143, 143, 0.5);
+    --black-o-75: rgba(34, 34, 34, 0.5);
     /* Main */
     --fun-green: #007745;
     --endeavour: #0069b6;
@@ -35,7 +36,8 @@
     /* Borders */
     --border-color: var(--silver);
     /* Box shadows */
-    --box-shadow-color: var(--black-o-25);
+    --box-shadow-color: var(--black-o-50);
+    --box-shadow-hover-color: var(--black-o-75);
     
     /* ***************** IUCN Red List categories ***************** */
     /* Extinct */

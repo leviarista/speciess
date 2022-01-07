@@ -5,3 +5,13 @@
 .text-center{
     text-align: center;
 }
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
