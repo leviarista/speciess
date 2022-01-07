@@ -6,7 +6,7 @@ import logo from '../public/images/speciess-logo.svg';
 
 export default function Home() {
   return (
-    <div className='container'>
+    <div className='container full-height-container'>
       <Meta />
 
       <header className={"text-center " + styles.header} >
@@ -25,11 +25,13 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.buttonsContainer}>
-            <Button href="/upload"
+            <Button
+              href="/upload"
               text="Get Started"
               className="button-secondary text-uppercase"
             />
-            <Button href="/explore"
+            <Button
+              href="/explore"
               text="Explore"
               className="button-primary text-uppercase"
             />

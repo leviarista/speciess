@@ -23,7 +23,7 @@
     /* Text */
     --text-color: var(--black);
     --text-light-color: var(--white);
-    --text-grey-color: var(--silver);
+    --text-grey-color: #878787;
     /* Headings */
     --headings-color: var(--black);
     --headings-light-color: var(--white);
@@ -38,32 +38,32 @@
     /* Box shadows */
     --box-shadow-color: var(--black-o-50);
     --box-shadow-hover-color: var(--black-o-75);
-    
+
     /* ***************** IUCN Red List categories ***************** */
     /* Extinct */
     --EX: var(--black);
     /* Extinct in the Wild */
-    --EW: #542344 ;
+    --EW: #542344;
     /* Regionally Extinct */
-    --RE: #9B4F96 ;
+    --RE: #9b4f96;
     /* Critically Endangered */
-    --CR: var(--wild-watermelon) ;
+    --CR: var(--wild-watermelon);
     /* Endangered */
-    --EN: #ff8b51 ;
+    --EN: #ff8b51;
     /* Vulnerable */
-    --VU: var(--saffron) ;
+    --VU: var(--saffron);
     /* Conservation Dependent */
-    --CD: #76BBD9 ;
+    --CD: #76bbd9;
     /* Near threatened */
-    --NT: var(--pastel-green) ;
+    --NT: var(--pastel-green);
     /* Least Concern */
-    --LC: #019393 ;
+    --LC: #019393;
     /* Data Deficient */
-    --DD: #D1D1C6 ;
+    --DD: #d1d1c6;
     /* Not Applicable */
-    --NA: #C1B5A5 ;
+    --NA: #c1b5a5;
     /* Not Evaluated */
-    --NE:  var(--white) ;
+    --NE: var(--white);
 }
 
 /* Color names from: https://chir.ag/projects/name-that-color */
