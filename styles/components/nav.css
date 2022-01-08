@@ -8,16 +8,20 @@
 }
 
 .nav .logo {
-    width: 200px;
-    height: 200px;
+    /* width: 200px;
+    height: 200px; */
+    width: 100px;
+    height: 125px;
     position: absolute;
     display: block;
     background-color: white;
-    padding: 20px 30px 30px 20px;
-    clip-path: ellipse(51% 44% at 0% 13%);
+    /* padding: 20px 30px 30px 20px; */
+    padding: 22px 30px 30px 20px;
+    /* clip-path: ellipse(51% 44% at 0% 13%); */
+    border-radius: 73% 27% 100% 0% / 0% 37% 63% 100%  ;
 }
 
-.nav .title-logo{
+.nav .title-logo {
     min-width: 200px !important;
 }
 

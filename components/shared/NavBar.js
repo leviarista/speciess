@@ -38,8 +38,8 @@ function NavBar() {
                     </Link>
                 </li> */}
                 <li>
-                    <Link href="/upload" onClick={hideNav}>
-                        GET STARTED
+                    <Link href="/create" onClick={hideNav}>
+                        CREATE
                     </Link>
                 </li>
                 <li>
@@ -52,11 +52,11 @@ function NavBar() {
                         ABOUT
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link href="/contact" onClick={hideNav}>
                         CONTACT
                     </Link>
-                </li>
+                </li> */}
                 <li className="hidden-md">
                     <a href="https://github.com/leviarista/eco-stats-peru" target="_blank" rel="noopenner noreferrer" aria-label="View source on GitHub">
                         <Image src={githubLogo} alt="GitHub Logo" /> GitHub

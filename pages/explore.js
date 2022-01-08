@@ -225,7 +225,7 @@ function Explore() {
     return (
         <div className='full-height-container'>
             <Meta
-                title={" "}
+                title={"Explore"}
                 description={"Explore CSS art of endangered species"}
             />
 
