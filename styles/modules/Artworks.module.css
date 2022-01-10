@@ -1,0 +1,280 @@
+.goBackLink a {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.goBackLink img {
+    margin-right: 5px;
+}
+
+.card {
+    --paddings: 25px;
+    --negative-margin-image: -80px;
+    margin: 15px 0 25px 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+}
+
+.cardHeader {
+    min-height: 100px;
+    padding: var(--paddings);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    color: var(--text-light-color);
+}
+
+.cardHeader h1 {
+    margin: 0;
+}
+
+.cardContent {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+}
+
+.cardContent article {
+    padding: var(--paddings);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardContent article:last-child {
+    background-color: var(--bg-default);
+    text-align: center;
+}
+
+.cardSpecieInfo {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+}
+
+.cardSpecieInfo > div:last-child {
+    text-align: center;
+}
+
+.cardBox {
+    width: fit-content;
+    min-width: 200px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-default);
+    border-radius: var(--border-radius);
+}
+
+.cardBox b {
+    margin: 0 10px;
+    padding-right: 10px;
+    border-right: solid 2px var(--silver);
+}
+
+.cardBox div {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    color: var(--white);
+    border-radius: 50%;
+}
+
+.cardSocialShare {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardSocialShare a:not(:last-child) {
+    margin-right: 5px;
+}
+
+.cardSocialShare img {
+    filter: drop-shadow(1px 1px var(--box-shadow-blur) var(--box-shadow-color));
+}
+
+.cardFooter {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cardArtContent {
+    margin-top: var(--negative-margin-image);
+}
+
+.cardImageContainer {
+    position: relative;
+    top: var(--negative-margin-image);
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.cardImage {
+    height: 100%;
+    margin: auto;
+    object-fit: contain;
+    padding: 5px;
+    background-color: var(--bg-light);
+    border: solid 5px var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+}
+
+.cardCreateButton {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    background: linear-gradient(
+        316.24deg,
+        #ebee46 -0.55%,
+        #49c707 26.48%,
+        #e06e10 50.47%,
+        #c1458f 72.18%,
+        #072ae3 99.03%
+    );
+    color: white;
+    border: solid 5px var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.cardCreateButton img {
+    margin-top: 10px;
+}
+
+.cardArtBox p {
+    margin: 0;
+    margin-top: 15px;
+}
+
+.cardArtBox span {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.cardButtonsContainer {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+    .cardHeader {
+        text-align: center;
+    }
+
+    .cardContent {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .cardBox {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardBox b {
+        margin: 5px 0;
+        padding: 0;
+        border: none;
+    }
+
+    .cardSpecieInfo {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 15px 0;
+    }
+
+    .cardSpecieInfo > div:first-child {
+        text-align: center;
+    }
+
+    .cardFooter {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .cardFooter a {
+        margin-top: 10px;
+    }
+
+    .cardArtContent {
+        margin-top: 0;
+    }
+
+    .cardImageContainer {
+        position: relative;
+        top: 0;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+    }
+}
+
+/* ***************** IUCN Red List categories ***************** */
+/* Extinct */
+.EX {
+    background-color: var(--EX);
+}
+/* Extinct in the Wild */
+.EW {
+    background-color: var(--EW);
+}
+/* Regionally Extinct */
+.RE {
+    background-color: var(--RE);
+}
+/* Critically Endangered */
+.CR {
+    background-color: var(--CR);
+}
+/* Endangered */
+.EN {
+    background-color: var(--EN);
+}
+/* Vulnerable */
+.VU {
+    background-color: var(--VU);
+}
+/* Conservation Dependent */
+.CD {
+    background-color: var(--CD);
+}
+/* Near threatened */
+.NT {
+    background-color: var(--NT);
+}
+/* Least Concern */
+.LC {
+    background-color: var(--LC);
+}
+/* Data Deficient */
+.DD {
+    color: var(--text-color);
+    background-color: var(--DD);
+}
+/* Not Applicable */
+.NA {
+    color: var(--text-color);
+    background-color: var(--NA);
+}
+/* Not Evaluated */
+.NE {
+    color: var(--text-color);
+    background-color: var(--NE);
+    border-bottom: solid 1px var(--border-color);
+}

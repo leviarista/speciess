@@ -18,7 +18,7 @@
     /* padding: 20px 30px 30px 20px; */
     padding: 22px 30px 30px 20px;
     /* clip-path: ellipse(51% 44% at 0% 13%); */
-    border-radius: 73% 27% 100% 0% / 0% 37% 63% 100%  ;
+    border-radius: 73% 27% 100% 0% / 0% 37% 63% 100%;
 }
 
 .nav .title-logo {
@@ -32,15 +32,20 @@
     margin-left: 120px;
     display: flex;
     align-items: center;
-    column-gap: 2rem;
+    /* column-gap: 2rem; */
     padding: 0;
     list-style-type: none;
 }
 
+.nav ul li:not(:first-child) {
+    margin-left: 1.5rem;
+}
+
 .nav ul li a {
     display: flex;
-    align-items: center;
-    column-gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    /* column-gap: 10px; */
     font-weight: 500;
     text-decoration: none;
     color: var(--text-color);
@@ -50,6 +55,10 @@
 .nav .icon {
     display: none;
     width: 0;
+}
+
+.nav-github {
+    display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -91,7 +100,8 @@
         height: auto;
         position: absolute;
         top: 55px;
-        display: flex;
+        display: grid;
+        justify-content: center;
         flex-direction: column;
         row-gap: 25px;
         margin-left: 0;
@@ -99,5 +109,8 @@
         background-color: white;
         box-shadow: 0px 2px var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
         z-index: 100;
+    }
+    .nav-github {
+        display: block;
     }
 }

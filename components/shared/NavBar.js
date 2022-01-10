@@ -57,9 +57,9 @@ function NavBar() {
                         CONTACT
                     </Link>
                 </li> */}
-                <li className="hidden-md">
+                <li className="nav-github">
                     <a href="https://github.com/leviarista/eco-stats-peru" target="_blank" rel="noopenner noreferrer" aria-label="View source on GitHub">
-                        <Image src={githubLogo} alt="GitHub Logo" /> GitHub
+                        <Image src={githubLogo} alt="GitHub Logo" />&nbsp;GitHub
                     </a>
                 </li>
             </ul>

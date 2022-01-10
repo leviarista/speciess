@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   return (
-    <div className={router.pathname === "/" && "main-bg"}>
+    <div className={router.pathname === "/" ? "main-bg" : undefined}>
       <NavBar />
       <Component {...pageProps} />
       <Footer />

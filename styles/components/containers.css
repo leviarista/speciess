@@ -7,8 +7,12 @@
     margin: var(--margins);
 }
 
-.full-height-container {
+.full-home-height-container {
     min-height: calc(100vh - 55px - 30px);
+}
+
+.full-height-container {
+    min-height: calc(100vh - 55px - 15px - 30px);
 }
 
 @media only screen and (max-width: 600px) {

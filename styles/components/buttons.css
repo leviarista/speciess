@@ -24,13 +24,13 @@
 .button-primary {
     color: var(--text-light-color);
     background-color: var(--primary);
-    border: solid 2px var(--silver);
+    /* border: solid 2px var(--silver); */
 }
 
 .button-secondary {
     color: var(--text-light-color);
     background-color: var(--secondary);
-    border: solid 2px var(--silver);
+    /* border: solid 2px var(--silver); */
 }
 
 .button-icon {
@@ -39,4 +39,17 @@
 
 .button-90{
     width: 90%;
+}
+
+.button-love {
+    width: 170px;
+    height: 40px;
+    margin: 10px 0;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    border: solid 1.5px var(--danger);
+}
+
+.button-love img{
+    margin-right: 10px;
 }

@@ -6,7 +6,7 @@ import logo from '../public/images/speciess-logo.svg';
 
 export default function Home() {
   return (
-    <div className='full-height-container'>
+    <div className='full-home-height-container'>
       <Meta
         title={" "}
         description={"Explore CSS art of endangered species"}

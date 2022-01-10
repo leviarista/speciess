@@ -274,38 +274,38 @@ function Explore() {
                                     <Link href={`https://www.facebook.com/sharer/sharer.php?u=https://ecostatsperu.netlify.app/&amp;src=sdkpreparse`} >
                                         {/* <Link href={`https://www.facebook.com/sharer/sharer.php?u=${prodURL}/artworks/${specie.artID}&amp;src=sdkpreparse`} > */}
                                         <a target="_blank" rel="noopenner noreferrer">
-                                            <img src="images/facebook.svg" />
+                                            <img src="/images/facebook.svg" />
                                         </a>
                                     </Link>
                                     <Link href={`https://twitter.com/intent/tweet?text=Look%20at%20this%cool%20CSS%20art%20of%20an%20endangered%20specie.&url=https://ecostatsperu.netlify.app&hashtags=endangered,endangeredspecies,IUCN,iucnredlist`} >
                                         {/* <Link href={`https://twitter.com/intent/tweet?text=Look%20at%20this%cool%20CSS%20art%20of%20an%20endangered%20specie.&url=${prodURL}/artworks/${specie.artID}&hashtags=endangered,endangeredspecies,IUCN,iucnredlist`} > */}
                                         <a target="_blank" rel="noopenner noreferrer">
-                                            <img src="images/twitter.svg" />
+                                            <img src="/images/twitter.svg" />
                                         </a>
                                     </Link>
                                     {/* <Link href={"whatsapp://send?text=Look at this cool CSS art of an endangered specie: https://ecostatsperu.netlify.app/"} >
                                         <a rel="noopenner noreferrer" data-action="share/whatsapp/share">
-                                            <img src="images/whatsapp.svg" />
+                                            <img src="/images/whatsapp.svg" />
                                         </a>
                                     </Link> */}
                                     <Link href={"https://www.linkedin.com/shareArticle?mini=true&url=https%3A//ecostatsperu.netlify.app/&title=Look%20at%20this%20cool%20CSS%20art%20of%20an%20endangered%20specie&summary=&source="} >
                                         <a target="_blank" rel="noopenner noreferrer">
-                                            <img src="images/linkedin.svg" />
+                                            <img src="/images/linkedin.svg" />
                                         </a>
                                     </Link>
                                     {/* <Link href={"#"} >
                                         <a target="_blank" rel="noopenner noreferrer">
-                                            <img src="images/instagram.svg" />
+                                            <img src="/images/instagram.svg" />
                                         </a>
                                     </Link> */}
                                     <Link href={"https://t.me/share/url?url=https://ecostatsperu.netlify.app/&text=Check this cool CSS art of an endangered specie."} >
                                         <a target="_blank" rel="noopenner noreferrer">
-                                            <img src="images/telegram.svg" />
+                                            <img src="/images/telegram.svg" />
                                         </a>
                                     </Link>
-                                    <Link href={"#"} >
+                                    <Link href={"#"}>
                                         <a onClick={() => onClickCopytoClipBoard(specie.artID)}>
-                                            <img src="images/copy-icon.svg" />
+                                            <img src="/images/copy-icon.svg" />
                                         </a>
                                     </Link>
                                 </div>
@@ -318,7 +318,7 @@ function Explore() {
                                         target={true}
                                     />
                                     <Button
-                                        href={"artworks/" + specie.id}
+                                        href={"/artworks/" + specie.id}
                                         icon="info"
                                         className="button-secondary button-icon"
                                     />

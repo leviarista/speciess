@@ -132,7 +132,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+}
+
+.cardSocialShare a:not(:last-child) {
+  margin-right: 5px;
 }
 
 .cardSocialShare img{
@@ -144,7 +147,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+}
+
+.cardButtonsContainer a:last-child{
+  margin-left: 5px;
 }
 
 /* Extra small devices (phones, 600px and down) */
