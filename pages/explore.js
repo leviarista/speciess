@@ -236,6 +236,11 @@ function Explore() {
 
             <section className={styles.searchBarContainer}>
                 <div className={"container"}>
+                    <select>
+                        <option value="all">All</option>
+                        <option value="all">With art</option>
+                        <option value="all">Without art</option>
+                    </select>
                     <input type={"text"} placeholder='Type to search something' />
                 </div>
             </section>
