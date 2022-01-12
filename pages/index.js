@@ -39,6 +39,7 @@ export default function Home() {
               className="button-primary text-uppercase"
             />
           </div>
+          <div className={styles.exploringPersonImage}></div>
         </section>
       </main>
 

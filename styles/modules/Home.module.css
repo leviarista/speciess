@@ -26,10 +26,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 50;
 }
 
 .buttonsContainer a:last-child {
   margin-left: 15px;
+  z-index: 20;
+}
+
+.exploringPersonImage{
+  width: 239px;
+  height: 228px;
+  background: url("/images/exploring-person.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  z-index: 1;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -43,5 +57,11 @@
   .buttonsContainer a:last-child {
     margin-left: 0;
     margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .exploringPersonImage{
+    display: none;
   }
 }

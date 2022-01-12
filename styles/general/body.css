@@ -38,5 +38,6 @@ body::-webkit-scrollbar-thumb {
     .main-bg {
         background-image: url(/images/home-bg.svg);
         background-size: cover;
+        z-index: 1;
     }
 }
