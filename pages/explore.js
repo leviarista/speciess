@@ -76,17 +76,6 @@ function Explore() {
 
             <section style={{ paddingTop: "15px", borderBottom: "solid 1px var(--border-color)" }}></section>
 
-            {/* <section className={styles.searchBarContainer}>
-                <div className={"container"}>
-                    <select>
-                        <option value="all">All</option>
-                        <option value="all">With art</option>
-                        <option value="all">Without art</option>
-                    </select>
-                    <input type={"text"} placeholder='Type to search something' />
-                </div>
-            </section> */}
-
             <section className={styles.cardsContainerWrapper}>
                 {!artworks ? <Loader /> :
                     <div className={styles.cardsContainer}>
@@ -141,21 +130,11 @@ function Explore() {
                                                 <img src="/images/twitter.svg" />
                                             </a>
                                         </Link>
-                                        {/* <Link href={"whatsapp://send?text=Look at this cool CSS art of an endangered specie: https://ecostatsperu.netlify.app/"} >
-                                            <a rel="noopenner noreferrer" data-action="share/whatsapp/share">
-                                                <img src="/images/whatsapp.svg" />
-                                            </a>
-                                        </Link> */}
                                         <Link href={`https://www.linkedin.com/shareArticle?mini=true&url=${getSpecieUrl(artwork.name)}/&title=Look%20at%20this%20cool%20CSS%20art%20of%20an%20endangered%20specie&summary=&source=`} >
                                             <a target="_blank" rel="noopenner noreferrer">
                                                 <img src="/images/linkedin.svg" />
                                             </a>
                                         </Link>
-                                        {/* <Link href={"#"} >
-                                            <a target="_blank" rel="noopenner noreferrer">
-                                                <img src="/images/instagram.svg" />
-                                            </a>
-                                        </Link> */}
                                         <Link href={`https://t.me/share/url?url=${getSpecieUrl(artwork.name)}/&text=Check this cool CSS art of an endangered specie.`} >
                                             <a target="_blank" rel="noopenner noreferrer">
                                                 <img src="/images/telegram.svg" />

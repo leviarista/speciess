@@ -89,12 +89,6 @@ function Create() {
 
             <section style={{ paddingTop: "15px", borderBottom: "solid 1px var(--border-color)" }}></section>
 
-            {/* <section className={styles.searchBarContainer}>
-                <div className={"container"}>
-                    <input type={"text"} placeholder='Type to search something' />
-                </div>
-            </section> */}
-
             <section className={styles.cardsContainerWrapper}>
                 {!species ? <Loader /> :
                     <div className={styles.cardsContainer}>

@@ -170,21 +170,11 @@ function Artwork(props) {
                                                 <img src="/images/twitter.svg" />
                                             </a>
                                         </Link>
-                                        {/* <Link href={"whatsapp://send?text=Look at this cool CSS art of an endangered specie: https://ecostatsperu.netlify.app/"} >
-                                            <a rel="noopenner noreferrer" data-action="share/whatsapp/share">
-                                                <img src="/images/whatsapp.svg" />
-                                            </a>
-                                        </Link> */}
                                         <Link href={`https://www.linkedin.com/shareArticle?mini=true&url=${getSpecieUrl(artwork.name)}/&title=Look%20at%20this%20cool%20CSS%20art%20of%20an%20endangered%20specie&summary=&source=`} >
                                             <a target="_blank" rel="noopenner noreferrer">
                                                 <img src="/images/linkedin.svg" />
                                             </a>
                                         </Link>
-                                        {/* <Link href={"#"} >
-                                            <a target="_blank" rel="noopenner noreferrer">
-                                                <img src="/images/instagram.svg" />
-                                            </a>
-                                        </Link> */}
                                         <Link href={`https://t.me/share/url?url=${getSpecieUrl(artwork.name)}/&text=Check this cool CSS art of an endangered specie.`} >
                                             <a target="_blank" rel="noopenner noreferrer">
                                                 <img src="/images/telegram.svg" />
@@ -218,12 +208,6 @@ function Artwork(props) {
                                 <p><span>Artwork name: </span><br />  {artwork.name ?? "--"}</p>
                             </div>
                             <div className={styles.cardButtonsContainer}>
-                                {/* <Button
-                                    href="#"
-                                    text="1444 likes"
-                                    className="button-love"
-                                    icon="love"
-                                /> */}
                                 <Button
                                     href={getCodeUrl(artwork.name)}
                                     text="See code"
@@ -241,32 +225,11 @@ function Artwork(props) {
 }
 
 export async function getServerSideProps({ req, query }) {
-    // const protocol = req.headers.referer.split('://')[0]
-    // const host = req.headers.host;
     const name = query.name;
-    // const res = await fetch(`${protocol}://${host}/api/artworks/${name}`, {
-    //     method: "GET",
-    //     headers: {
-    //         'User-Agent': 'ANYTHING_WILL_WORK_HERE',
-    //         "Content-Type": "application/json",
-    //     }
-    // })
-    // const artwork = await res.json()
-    // let artwork = await apiRequest(`artworks/${name}`)
-
     const API_SERVER = process.env.NEXT_PUBLIC_API_SERVER;
 
     let res = await fetch(`${API_SERVER}/api/artworks/${name}`)
     let artwork = await res.json()
-
-    // const res = await fetch(`${protocol}://${host}/api/artworks/${name}`, {
-    //     method: "GET",
-    //     headers: {
-    //         'User-Agent': 'ANYTHING_WILL_WORK_HERE',
-    //         "Content-Type": "application/json",
-    //     }
-    // })
-    // const artwork = await res.json()
 
     return {
         props: {
