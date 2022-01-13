@@ -5,7 +5,7 @@ import styles from '../styles/modules/About.module.css'
 function About(props) {
 
     const { info } = props;
-    console.log("🚀 ~ file: about.js ~ line 8 ~ About ~ info", info)
+
     return (
         <div className='container full-height-container'>
             <Meta

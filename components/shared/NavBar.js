@@ -48,6 +48,11 @@ function NavBar() {
                     </Link>
                 </li>
                 <li>
+                    <Link href="/charts" onClick={hideNav}>
+                        CHARTS
+                    </Link>
+                </li>
+                <li>
                     <Link href="/about" onClick={hideNav}>
                         ABOUT
                     </Link>
