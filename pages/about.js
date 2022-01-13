@@ -2,7 +2,10 @@ import Meta from '/components/shared/Meta'
 import Link from 'next/link';
 import styles from '../styles/modules/About.module.css'
 
-export default function About() {
+function About(props) {
+
+    const { info } = props;
+    console.log("🚀 ~ file: about.js ~ line 8 ~ About ~ info", info)
     return (
         <div className='container full-height-container'>
             <Meta
@@ -10,11 +13,11 @@ export default function About() {
                 description={"About SPECIESS - CSS art of an endangered species"}
             />
 
-            <header>
-                <h1>About</h1>
-            </header>
-
             <section>
+                <header>
+                    <h1>About</h1>
+                </header>
+
                 <p>
                     SPECIESS is a website where you can create, explore and share CSS art about endangered species (from the IUCN Red List) and so spread raise awareness about it.
                 </p>
@@ -29,8 +32,25 @@ export default function About() {
                         </a>
                     </Link>
                 </p>
+            </section>
+            <section>
+                <header>
+                    <h1>Contact</h1>
+                </header>
                 <p>
-                    And if you want to make contact, write me at <a href='mailto:levi.arista@gmail.com'>levi.arista@gmail.com</a>
+                    If you want to make contact, find me on:
+                </p>
+                <p>
+                    {info.linkedin && <a href={`https://pe.linkedin.com/in/${info.linkedin}`} target="_blank" rel="noopenner noreferrer">Linkedin</a>}
+                </p>
+                <p>
+                    {info.github && <a href={`https://github.com/${info.github}`} target="_blank" rel="noopenner noreferrer">GitHub</a>}
+                </p>
+                <p>
+                    {info["dev.to"] && <a href={`https://dev.to/${info["dev.to"]}`} target="_blank" rel="noopenner noreferrer">Dev.to</a>}
+                </p>
+                <p>
+                    {info.email && <a href={`mailto:${info.email}`} target="_blank" rel="noopenner noreferrer">{info.email}</a>}
                 </p>
             </section>
 
@@ -38,3 +58,17 @@ export default function About() {
         </div>
     )
 }
+
+export async function getServerSideProps({ req, query }) {
+    const API_SERVER = process.env.NEXT_PUBLIC_API_SERVER;
+    let res = await fetch(`${API_SERVER}/api/contact-info`)
+    let info = await res.json()
+
+    return {
+        props: {
+            info: info ?? null
+        }
+    }
+}
+
+export default About
