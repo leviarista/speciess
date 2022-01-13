@@ -8,7 +8,7 @@ function Footer() {
     const router = useRouter();
 
     return (
-        <footer className={"footer " + (router.pathname === "/explore" && "hidden")} >
+        <footer className={"footer " + ((router.pathname === "/explore" || router.pathname === "/create") && "hidden")} >
             <Link href="https://github.com/leviarista/speciess">
                 <a target="_blank" rel="noopenner noreferrer" className='github-logo'>
                     <Image src={githubLogo} alt="GitHub Logo" />

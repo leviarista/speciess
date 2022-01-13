@@ -1,6 +1,9 @@
 .header {
   padding-top: 15px;
-  line-height: 0.75;
+}
+
+.header h1 {
+  margin: 0;
 }
 
 .searchBarContainer {
@@ -87,10 +90,14 @@
 }
 
 .cardContent {
+  height: calc(100% - 50px);
   position: relative;
   top: -50px;
   margin-bottom: -50px;
   padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cardImage {
@@ -106,6 +113,12 @@
   border: solid 5px var(--border-color);
   border-radius: var(--border-radius);
   box-shadow: 0px 0px var(--box-shadow-blur) var(--box-shadow-spread) var(--box-shadow-color);
+}
+
+.cardImage img{
+  object-fit: cover;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .cardTitle {
@@ -128,12 +141,13 @@
   font-size: 0.8rem;
   background-color: var(--bg-default);
   border-radius: var(--border-radius);
+  align-items: center;
 }
 
 .cardBox div {
   text-align: center;
   word-wrap: break-word;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .cardSocialShare {
@@ -262,5 +276,10 @@
 .NE {
   color: var(--text-color);
   background-color: var(--NE);
+  border-bottom: solid 1px var(--border-color);
+}
+.NONE {
+  color: var(--text-color);
+  background-color: var(--white);
   border-bottom: solid 1px var(--border-color);
 }

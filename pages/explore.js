@@ -235,14 +235,14 @@ function Explore() {
             </header>
 
             <section className={styles.searchBarContainer}>
-                <div className={"container"}>
+                {/* <div className={"container"}>
                     <select>
                         <option value="all">All</option>
                         <option value="all">With art</option>
                         <option value="all">Without art</option>
                     </select>
                     <input type={"text"} placeholder='Type to search something' />
-                </div>
+                </div> */}
             </section>
 
             <section className={styles.cardsContainerWrapper}>
@@ -259,9 +259,9 @@ function Explore() {
                                         <img src={specie.preview} alt="preview" />
                                         :
                                         <Link href="/upload">
-                                            <a style={{ height: "100%", background: "linear-gradient(316.24deg, #EBEE46 -0.55%, #49C707 26.48%, #E06E10 50.47%, #C1458F 72.18%, #072AE3 99.03%)", color: "white", borderRadius: "2px", gap: "5px" }} className="center-content">
+                                            <a style={{ height: "100%", background: "linear-gradient(316.24deg, #EBEE46 -0.55%, #49C707 26.48%, #E06E10 50.47%, #C1458F 72.18%, #072AE3 99.03%)", color: "white", borderRadius: "2px" }} className="center-content">
                                                 Create CSS Art
-                                                <img src="/images/add-icon.svg" />
+                                                <img src="/images/add-icon.svg" style={{ marginTop: "5px" }} />
                                             </a>
                                         </Link>
                                     }
