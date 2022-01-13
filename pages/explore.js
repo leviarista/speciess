@@ -3,223 +3,62 @@ import Link from 'next/link'
 import Meta from '/components/shared/Meta'
 import styles from '../styles/modules/Explore.module.css'
 import Button from '/components/shared/Button'
+import { getArtworks } from "/util/api";
+import Loader from "/components/shared/Loader";
 
 function Explore() {
     const prodURL = "http://localhost:3001"
-    const species = [
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "EN",
-            artID: 987,
-            author: "speciess.admin",
-            createdAt: "10 June 2012",
-            preview: "/artworks/cyclura-lewisi.png",
-            htmlCode: "",
-            cssCode: "",
-        },
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "EX",
-        },
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "VU",
-            artID: 987,
-            author: "speciess.admin",
-            createdAt: "10 June 2012",
-            preview: "/artworks/cyclura-lewisi.png",
-            htmlCode: "",
-            cssCode: "",
-        },
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "EW",
-            artID: 987,
-            author: "speciess.admin",
-            createdAt: "10 June 2012",
-            preview: "/artworks/ramosmania-rodriguesii.png",
-            htmlCode: "",
-            cssCode: "",
-        },
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "NT",
-            artID: 987,
-            author: "speciess.admin",
-            createdAt: "10 June 2012",
-            preview: "/artworks/cyclura-lewisi.png",
-            htmlCode: "",
-            cssCode: "",
-        },
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "CD",
-            artID: 987,
-            author: "speciess.admin",
-            createdAt: "10 June 2012",
-            preview: "/artworks/kalivi-kodi.png",
-            htmlCode: "",
-            cssCode: "",
-        },
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "LC",
-            artID: 987,
-            author: "speciess.admin",
-            createdAt: "10 June 2012",
-            preview: "/artworks/cyclura-lewisi.png",
-            htmlCode: "",
-            cssCode: "",
-        },
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "CR",
-            artID: 987,
-            author: "speciess.admin",
-            createdAt: "10 June 2012",
-            preview: "/artworks/cyclura-lewisi.png",
-            htmlCode: "",
-            cssCode: "",
-        },
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "EN",
-            artID: 987,
-            author: "speciess.admin",
-            createdAt: "10 June 2012",
-            preview: "/artworks/cyclura-lewisi.png",
-            htmlCode: "",
-            cssCode: "",
-        },
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "NA",
-            artID: 987,
-            author: "speciess.admin",
-            createdAt: "10 June 2012",
-            preview: "/artworks/cyclura-lewisi.png",
-            htmlCode: "",
-            cssCode: "",
-        },
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "DD",
-            artID: 987,
-            author: "speciess.admin",
-            createdAt: "10 June 2012",
-            preview: "/artworks/cyclura-lewisi.png",
-            htmlCode: "",
-            cssCode: "",
-        },
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "CR",
-            artID: 987,
-            author: "speciess.admin",
-            createdAt: "10 June 2012",
-            preview: "/artworks/cyclura-lewisi.png",
-            htmlCode: "",
-            cssCode: "",
-        },
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "RE",
-            artID: 987,
-            author: "speciess.admin",
-            createdAt: "10 June 2012",
-            preview: "/artworks/cyclura-lewisi.png",
-            htmlCode: "",
-            cssCode: "",
-        },
-        {
-            id: 123,
-            name: "Cyclura lewisi",
-            commonName: "Grand Cayman Blue Iguana",
-            url: "https://www.iucnredlist.org/es/species/44275/2994409",
-            dangerLevel: "NE",
-            artID: 987,
-            author: "speciess.admin",
-            createdAt: "10 June 2012",
-            preview: "/artworks/cyclura-lewisi.png",
-            htmlCode: "",
-            cssCode: "",
-        },
-    ]
+
+    let { artworks } = getArtworks();
 
     const getDangerLevelName = (dangerLevel) => {
-        switch (dangerLevel) {
-            case "EX":
-                return "Extinct";
-            case "EW":
-                return "Extinct in the Wild";
-            case "RE":
-                return "Regionally Extinct";
-            case "CR":
-                return "Critically Endangered";
-            case "EN":
-                return "Endangered";
-            case "VU":
-                return "Vulnerable";
-            case "CD":
-                return "Conservation Dependent";
-            case "NT":
-                return "Near threatened";
-            case "LC":
-                return "Least Concern";
-            case "DD":
-                return "Data Deficient";
-            case "NA":
-                return "Not Applicable";
-            case "NE":
-                return "Not Evaluated";
+        if (!dangerLevel) return "";
+        switch (dangerLevel.toLowerCase()) {
+            case "extinct":
+                return "EX";
+            case "extinct in the wild":
+                return "EW";
+            case "regionally extinct":
+                return "RE";
+            case "critically endangered":
+                return "CR";
+            case "endangered":
+                return "EN";
+            case "vulnerable":
+                return "VU";
+            case "conservation dependent":
+                return "CD";
+            case "near threatened":
+                return "NT";
+            case "least concern" || "lower risk/least concern":
+                return "LC";
+            case "data deficient":
+                return "DD";
+            case "not applicable":
+                return "NA";
+            case "not evaluated":
+                return "NE";
             default:
-                return "";
+                return "NONE";
         }
     }
 
-    const onClickCopytoClipBoard = (artID) => {
-        // navigator.clipboard.writeText(`http://localhost:3001/artworks/${specie.artID}`);
-        navigator.clipboard.writeText("https://ecostatsperu.netlify.app/");
+    const onClickCopytoClipBoard = (name) => {
+        const url = getSpecieUrl(name);
+        navigator.clipboard.writeText(url);
         alert("URL copied to clipboard");
+    }
+
+    const getSpecieUrl = (name) => {
+        return `${prodURL}/artworks/${name}`;
+    }
+
+    const getSpeciePreviewUrl = (name) => {
+        return `https://raw.githubusercontent.com/leviarista/speciess/main/public/artworks/${name}/${name}.png`;
+    }
+
+    const getIUCNUrl = (internalTaxonId, assessmentId) => {
+        return `https://www.iucnredlist.org/species/${internalTaxonId}/${assessmentId}/`;
     }
 
     return (
@@ -229,109 +68,123 @@ function Explore() {
                 description={"Explore CSS art of endangered species"}
             />
 
-            <header className={"container " + styles.header}>
+            <header className={"container " + styles.header}
+            >
                 <h1>Explore</h1>
                 Explore CSS art of endangered species
             </header>
 
-            <section className={styles.searchBarContainer}>
-                {/* <div className={"container"}>
+            <section style={{ paddingTop: "15px", borderBottom: "solid 1px var(--border-color)" }}></section>
+
+            {/* <section className={styles.searchBarContainer}>
+                <div className={"container"}>
                     <select>
                         <option value="all">All</option>
                         <option value="all">With art</option>
                         <option value="all">Without art</option>
                     </select>
                     <input type={"text"} placeholder='Type to search something' />
-                </div> */}
-            </section>
+                </div>
+            </section> */}
 
             <section className={styles.cardsContainerWrapper}>
-                <div className={styles.cardsContainer}>
-                    {species.map((specie, index) =>
-                        <div className={styles.card} key={index}>
-                            <div className={styles.cardHeader + " " + styles[specie.dangerLevel]}>
-                                <div>{getDangerLevelName(specie.dangerLevel)}</div>
-                                <b>{specie.dangerLevel}</b>
-                            </div>
-                            <div className={styles.cardContent}>
+                {!artworks ? <Loader /> :
+                    <div className={styles.cardsContainer}>
+                        <div className={styles.card + " center-content"} style={{padding: "50px 0"}}>
                                 <div className={styles.cardImage}>
-                                    {specie.preview ?
-                                        <img src={specie.preview} alt="preview" />
-                                        :
-                                        <Link href="/upload">
-                                            <a style={{ height: "100%", background: "linear-gradient(316.24deg, #EBEE46 -0.55%, #49C707 26.48%, #E06E10 50.47%, #C1458F 72.18%, #072AE3 99.03%)", color: "white", borderRadius: "2px" }} className="center-content">
-                                                Create CSS Art
-                                                <img src="/images/add-icon.svg" style={{ marginTop: "5px" }} />
+                                    <Link href="/create">
+                                        <a style={{ height: "100%", background: "linear-gradient(316.24deg, #EBEE46 -0.55%, #49C707 26.48%, #E06E10 50.47%, #C1458F 72.18%, #072AE3 99.03%)", color: "white", borderRadius: "2px" }} className="center-content">
+                                            Create CSS Art
+                                            <img src="/images/add-icon.svg" style={{ marginTop: "5px" }} />
+                                        </a>
+                                    </Link>
+                                </div>
+                        </div>
+                        {artworks.map((artwork, index) =>
+                            <div className={styles.card} key={index}>
+                                <div className={styles.cardHeader + " " + styles[getDangerLevelName(artwork.specie[0].redlistCategory)]}>
+                                    <div>{artwork.specie[0].redlistCategory}</div>
+                                    <b>{getDangerLevelName(artwork.specie[0].redlistCategory)}</b>
+                                </div>
+                                <div className={styles.cardContent}>
+                                    <div className={styles.cardImage}>
+                                        <img src={getSpeciePreviewUrl(artwork.name)} alt="preview" />
+                                    </div>
+                                    <div className={styles.cardTitle}>
+                                        <b>{artwork.specie[0].scientificName}</b><br />
+                                        {artwork.commonNames && artwork.commonNames.length > 0 &&
+                                            <>{artwork.commonNames[0].name}<br /></>}
+                                    </div>
+                                    <div className={styles.cardBox}>
+                                        <div>
+                                            CSS art by <br />
+                                            {artwork.author ?
+                                                <Link href={`https://github.com/${artwork.author}`} >
+                                                    <a target="_blank" rel="noopenner noreferrer">
+                                                        {artwork.author}
+                                                    </a>
+                                                </Link>
+                                                : "--"
+                                            }
+                                        </div>
+                                        <div>Artwork name: <br />  {artwork.name ?? "--"}</div>
+                                    </div>
+                                    <div className='text-center'>Share via:</div>
+                                    <div className={styles.cardSocialShare}>
+                                        <Link href={`https://www.facebook.com/sharer/sharer.php?u=${getSpecieUrl(artwork.name)}/&amp;src=sdkpreparse`} >
+                                            <a target="_blank" rel="noopenner noreferrer">
+                                                <img src="/images/facebook.svg" />
                                             </a>
                                         </Link>
-                                    }
-                                </div>
-                                <div className={styles.cardTitle}>
-                                    <b>{specie.name}</b><br />
-                                    {specie.commonName}
-                                </div>
-                                <div className={styles.cardBox}>
-                                    <div>CSS art by <br /> {specie.author ?? "--"}</div>
-                                    <div>Created on: <br />  {specie.createdAt ?? "--"}</div>
-                                </div>
-                                <div className='text-center'>Share via:</div>
-                                <div className={styles.cardSocialShare}>
-                                    <Link href={`https://www.facebook.com/sharer/sharer.php?u=https://ecostatsperu.netlify.app/&amp;src=sdkpreparse`} >
-                                        {/* <Link href={`https://www.facebook.com/sharer/sharer.php?u=${prodURL}/artworks/${specie.artID}&amp;src=sdkpreparse`} > */}
-                                        <a target="_blank" rel="noopenner noreferrer">
-                                            <img src="/images/facebook.svg" />
-                                        </a>
-                                    </Link>
-                                    <Link href={`https://twitter.com/intent/tweet?text=Look%20at%20this%cool%20CSS%20art%20of%20an%20endangered%20specie.&url=https://ecostatsperu.netlify.app&hashtags=endangered,endangeredspecies,IUCN,iucnredlist`} >
-                                        {/* <Link href={`https://twitter.com/intent/tweet?text=Look%20at%20this%cool%20CSS%20art%20of%20an%20endangered%20specie.&url=${prodURL}/artworks/${specie.artID}&hashtags=endangered,endangeredspecies,IUCN,iucnredlist`} > */}
-                                        <a target="_blank" rel="noopenner noreferrer">
-                                            <img src="/images/twitter.svg" />
-                                        </a>
-                                    </Link>
-                                    {/* <Link href={"whatsapp://send?text=Look at this cool CSS art of an endangered specie: https://ecostatsperu.netlify.app/"} >
-                                        <a rel="noopenner noreferrer" data-action="share/whatsapp/share">
-                                            <img src="/images/whatsapp.svg" />
-                                        </a>
-                                    </Link> */}
-                                    <Link href={"https://www.linkedin.com/shareArticle?mini=true&url=https%3A//ecostatsperu.netlify.app/&title=Look%20at%20this%20cool%20CSS%20art%20of%20an%20endangered%20specie&summary=&source="} >
-                                        <a target="_blank" rel="noopenner noreferrer">
-                                            <img src="/images/linkedin.svg" />
-                                        </a>
-                                    </Link>
-                                    {/* <Link href={"#"} >
-                                        <a target="_blank" rel="noopenner noreferrer">
-                                            <img src="/images/instagram.svg" />
-                                        </a>
-                                    </Link> */}
-                                    <Link href={"https://t.me/share/url?url=https://ecostatsperu.netlify.app/&text=Check this cool CSS art of an endangered specie."} >
-                                        <a target="_blank" rel="noopenner noreferrer">
-                                            <img src="/images/telegram.svg" />
-                                        </a>
-                                    </Link>
-                                    <Link href={"#"}>
-                                        <a onClick={() => onClickCopytoClipBoard(specie.artID)}>
-                                            <img src="/images/copy-icon.svg" />
-                                        </a>
-                                    </Link>
-                                </div>
-                                <div className={styles.cardButtonsContainer}>
-                                    <Button
-                                        href={specie.url}
-                                        text="See at IUCN"
-                                        className="button-primary button-90"
-                                        style={{ width: "90%" }}
-                                        target={true}
-                                    />
-                                    <Button
-                                        href={"/artworks/" + specie.id}
-                                        icon="info"
-                                        className="button-secondary button-icon"
-                                    />
+                                        <Link href={`https://twitter.com/intent/tweet?text=Look%20at%20this%cool%20CSS%20art%20of%20an%20endangered%20specie.&url=${getSpecieUrl(artwork.name)}&hashtags=endangered,endangeredspecies,IUCN,iucnredlist`} >
+                                            <a target="_blank" rel="noopenner noreferrer">
+                                                <img src="/images/twitter.svg" />
+                                            </a>
+                                        </Link>
+                                        {/* <Link href={"whatsapp://send?text=Look at this cool CSS art of an endangered specie: https://ecostatsperu.netlify.app/"} >
+                                            <a rel="noopenner noreferrer" data-action="share/whatsapp/share">
+                                                <img src="/images/whatsapp.svg" />
+                                            </a>
+                                        </Link> */}
+                                        <Link href={`https://www.linkedin.com/shareArticle?mini=true&url=${getSpecieUrl(artwork.name)}/&title=Look%20at%20this%20cool%20CSS%20art%20of%20an%20endangered%20specie&summary=&source=`} >
+                                            <a target="_blank" rel="noopenner noreferrer">
+                                                <img src="/images/linkedin.svg" />
+                                            </a>
+                                        </Link>
+                                        {/* <Link href={"#"} >
+                                            <a target="_blank" rel="noopenner noreferrer">
+                                                <img src="/images/instagram.svg" />
+                                            </a>
+                                        </Link> */}
+                                        <Link href={`https://t.me/share/url?url=${getSpecieUrl(artwork.name)}/&text=Check this cool CSS art of an endangered specie.`} >
+                                            <a target="_blank" rel="noopenner noreferrer">
+                                                <img src="/images/telegram.svg" />
+                                            </a>
+                                        </Link>
+                                        <Link href={"#"}>
+                                            <a onClick={() => onClickCopytoClipBoard(artwork.name)}>
+                                                <img src="/images/copy-icon.svg" />
+                                            </a>
+                                        </Link>
+                                    </div>
+                                    <div className={styles.cardButtonsContainer}>
+                                        <Button
+                                            href={getIUCNUrl(artwork.internalTaxonId, artwork.assessmentId)}
+                                            text="Info"
+                                            className="button-primary button-50"
+                                            target={true}
+                                        />
+                                        <Button
+                                            href={getSpecieUrl(artwork.name)}
+                                            text="View"
+                                            className="button-secondary button-50"
+                                        />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    )}
-                </div>
+                        )}
+                    </div>
+                }
             </section >
 
         </div >

@@ -9,7 +9,7 @@ import { getSpecies } from "/util/api";
 
 function Create() {
 
-    let { species, errorSpecies } = getSpecies();
+    let { species } = getSpecies();
 
     const prodURL = "http://localhost:3001"
 
@@ -89,11 +89,13 @@ function Create() {
                 Choose an specie from the list below to create a CSS art
             </header>
 
-            <section className={styles.searchBarContainer}>
-                {/* <div className={"container"}>
+            <section style={{ paddingTop: "15px", borderBottom: "solid 1px var(--border-color)" }}></section>
+
+            {/* <section className={styles.searchBarContainer}>
+                <div className={"container"}>
                     <input type={"text"} placeholder='Type to search something' />
-                </div> */}
-            </section>
+                </div>
+            </section> */}
 
             <section className={styles.cardsContainerWrapper}>
                 {!species ? <Loader /> :

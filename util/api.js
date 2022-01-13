@@ -3,7 +3,29 @@
 import useSWR from 'swr';
 import useSWRImmutable from 'swr/immutable'
 
+const API_SERVER = process.env.NEXT_PUBLIC_API_SERVER;
+
 const fetcher = url => fetch(url).then(res => res.json())
+
+export async function apiRequest(path, method = "GET", data) {
+    console.log("🚀 ~ file: api.js ~ line 12 ~ apiRequest ~ `${API_SERVER}/api/${path}`", `${API_SERVER}/api/${path}`)
+    const res = await fetch(`${API_SERVER}/api/${path}`, {
+        method: method,
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: data ? JSON.stringify(data) : undefined,
+    });
+
+    const json = await res.json();
+    if (json.errors) {
+        console.error(json.errors)
+        throw new Error('Failed to fetch API')
+    }
+
+    console.log("🚀 ~ file: api.js ~ line 26 ~ apiRequest ~ json.data", json.data)
+    return json.data
+}
 
 export function getSpecies() {
     const url = `/api/species`

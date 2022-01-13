@@ -37,8 +37,12 @@
     width: 40px;
 }
 
-.button-90{
+.button-90 {
     width: 90%;
+}
+
+.button-50 {
+    width: 50%;
 }
 
 .button-love {
@@ -50,6 +54,6 @@
     border: solid 1.5px var(--danger);
 }
 
-.button-love img{
+.button-love img {
     margin-right: 10px;
 }
