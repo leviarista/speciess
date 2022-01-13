@@ -7,7 +7,7 @@ import { getArtworks } from "/util/api";
 import Loader from "/components/shared/Loader";
 
 function Explore() {
-    const prodURL = "http://localhost:3001"
+    const API_SERVER = process.env.NEXT_PUBLIC_API_SERVER;
 
     let { artworks } = getArtworks();
 
@@ -50,7 +50,7 @@ function Explore() {
     }
 
     const getSpecieUrl = (name) => {
-        return `${prodURL}/artworks/${name}`;
+        return `${API_SERVER}/artworks/${name}`;
     }
 
     const getSpeciePreviewUrl = (name) => {

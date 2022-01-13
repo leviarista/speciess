@@ -7,7 +7,7 @@ import { apiRequest } from "/util/api";
 import { getSpecies } from "../../util/api";
 
 function Artwork(props) {
-    const prodURL = "http://localhost:3001"
+    const API_SERVER = process.env.NEXT_PUBLIC_API_SERVER;
 
     const { artwork } = props
 
@@ -68,7 +68,7 @@ function Artwork(props) {
     }
 
     const getSpecieUrl = (name) => {
-        return `${prodURL}/artworks/${name}`;
+        return `${API_SERVER}/artworks/${name}`;
     }
 
     return (

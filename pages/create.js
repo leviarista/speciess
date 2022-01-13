@@ -11,8 +11,6 @@ function Create() {
 
     let { species } = getSpecies();
 
-    const prodURL = "http://localhost:3001"
-
     const getDangerLevelName = (dangerLevel) => {
         if (!dangerLevel) return "";
         switch (dangerLevel.toLowerCase()) {
