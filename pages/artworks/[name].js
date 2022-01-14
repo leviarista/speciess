@@ -40,6 +40,10 @@ function Artwork(props) {
         return `${API_SERVER}/artworks/${name}`;
     }
 
+    const getIUCNUrl = (internalTaxonId, assessmentId) => {
+        return `https://www.iucnredlist.org/species/${internalTaxonId}/${assessmentId}/`;
+    }
+
     return (
         <div className='container full-height-container'>
             <Meta
@@ -121,7 +125,7 @@ function Artwork(props) {
                         </div>
                         <div className={styles.cardFooter}>
                             <Button
-                                href={specie.url}
+                                href={getIUCNUrl(artwork.internalTaxonId, artwork.assessmentId)}
                                 text="See at IUCN"
                                 className="button-primary"
                                 target={true}
