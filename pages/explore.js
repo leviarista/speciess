@@ -48,15 +48,15 @@ function Explore() {
             <section className={styles.cardsContainerWrapper}>
                 {!artworks ? <Loader /> :
                     <div className={styles.cardsContainer}>
-                        <div className={styles.card + " center-content"} style={{padding: "50px 0"}}>
-                                <div className={styles.cardImage}>
-                                    <Link href="/create">
-                                        <a style={{ height: "100%", background: "linear-gradient(316.24deg, #EBEE46 -0.55%, #49C707 26.48%, #E06E10 50.47%, #C1458F 72.18%, #072AE3 99.03%)", color: "white", borderRadius: "2px" }} className="center-content">
-                                            Create CSS Art
-                                            <img src="/images/add-icon.svg" style={{ marginTop: "5px" }} />
-                                        </a>
-                                    </Link>
-                                </div>
+                        <div className={styles.card + " center-content"} style={{ padding: "50px 0" }}>
+                            <div className={styles.cardImage}>
+                                <Link href="/create">
+                                    <a style={{ height: "100%", background: "linear-gradient(316.24deg, #EBEE46 -0.55%, #49C707 26.48%, #E06E10 50.47%, #C1458F 72.18%, #072AE3 99.03%)", color: "white", borderRadius: "2px" }} className="center-content">
+                                        Create CSS Art
+                                        <img src="/images/add-icon.svg" style={{ marginTop: "5px" }} />
+                                    </a>
+                                </Link>
+                            </div>
                         </div>
                         {artworks.map((artwork, index) =>
                             <div className={styles.card} key={index}>
@@ -65,7 +65,7 @@ function Explore() {
                                     <b>{getDangerLevelName(artwork.specie[0].redlistCategory)}</b>
                                 </div>
                                 <div className={styles.cardContent}>
-                                    <div className={styles.cardImage} style={{padding: "7px"}}>
+                                    <div className={styles.cardImage} style={{ padding: "7px" }}>
                                         <img src={getSpeciePreviewUrl(artwork.name)} alt="preview" />
                                     </div>
                                     <div className={styles.cardTitle}>
@@ -89,22 +89,22 @@ function Explore() {
                                     </div>
                                     <div className='text-center'>Share via:</div>
                                     <div className={styles.cardSocialShare}>
-                                        <Link href={`https://www.facebook.com/sharer/sharer.php?u=${getSpecieUrl(artwork.name)}/&amp;src=sdkpreparse`} >
+                                        <Link href={`https://www.facebook.com/sharer/sharer.php?u=${getSpecieUrl(artwork.name)}&amp;src=sdkpreparse`} >
                                             <a target="_blank" rel="noopenner noreferrer">
                                                 <img src="/images/facebook.svg" />
                                             </a>
                                         </Link>
-                                        <Link href={`https://twitter.com/intent/tweet?text=Look%20at%20this%cool%20CSS%20art%20of%20an%20endangered%20specie.&url=${getSpecieUrl(artwork.name)}&hashtags=endangered,endangeredspecies,IUCN,iucnredlist`} >
+                                        <Link href={`https://twitter.com/intent/tweet?url=${getSpecieUrl(artwork.name)}&text=Check out this cool CSS art of this endangered specie: ${artwork.specie[0].scientificName}.&hashtags=endangered,endangeredspecies,IUCN,iucnredlist`} >
                                             <a target="_blank" rel="noopenner noreferrer">
                                                 <img src="/images/twitter.svg" />
                                             </a>
                                         </Link>
-                                        <Link href={`https://www.linkedin.com/shareArticle?mini=true&url=${getSpecieUrl(artwork.name)}/&title=Look%20at%20this%20cool%20CSS%20art%20of%20an%20endangered%20specie&summary=&source=`} >
+                                        <Link href={`https://www.linkedin.com/shareArticle?mini=false&url=${getSpecieUrl(artwork.name)}`} >
                                             <a target="_blank" rel="noopenner noreferrer">
                                                 <img src="/images/linkedin.svg" />
                                             </a>
                                         </Link>
-                                        <Link href={`https://t.me/share/url?url=${getSpecieUrl(artwork.name)}/&text=Check this cool CSS art of an endangered specie.`} >
+                                        <Link href={`https://t.me/share/url?url=${getSpecieUrl(artwork.name)}/&text=Check out this cool CSS art of this endangered specie: ${artwork.specie[0].scientificName}.`} >
                                             <a target="_blank" rel="noopenner noreferrer">
                                                 <img src="/images/telegram.svg" />
                                             </a>

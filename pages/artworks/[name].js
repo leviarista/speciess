@@ -31,7 +31,7 @@ function Artwork(props) {
     const getSpeciePreviewUrl = (name) => {
         return `https://raw.githubusercontent.com/leviarista/speciess/main/public/artworks/${name}/${name}.png`;
     }
-    
+
     const getCodeUrl = (name) => {
         return `https://github.com/leviarista/speciess/tree/main/public/artworks/${name}`;
     }
@@ -43,7 +43,7 @@ function Artwork(props) {
     return (
         <div className='container full-height-container'>
             <Meta
-                title={"Artworks"}
+                title={"Artwork of " + specie.scientificName}
                 description={"CSS art of an endangered specie"}
             />
 
@@ -129,32 +129,32 @@ function Artwork(props) {
                             <div>
                                 <div className='text-center'>Share via:</div>
                                 <div className={styles.cardSocialShare}>
-                                        <Link href={`https://www.facebook.com/sharer/sharer.php?u=${getSpecieUrl(artwork.name)}/&amp;src=sdkpreparse`} >
-                                            <a target="_blank" rel="noopenner noreferrer">
-                                                <img src="/images/facebook.svg" />
-                                            </a>
-                                        </Link>
-                                        <Link href={`https://twitter.com/intent/tweet?text=Look%20at%20this%cool%20CSS%20art%20of%20an%20endangered%20specie.&url=${getSpecieUrl(artwork.name)}&hashtags=endangered,endangeredspecies,IUCN,iucnredlist`} >
-                                            <a target="_blank" rel="noopenner noreferrer">
-                                                <img src="/images/twitter.svg" />
-                                            </a>
-                                        </Link>
-                                        <Link href={`https://www.linkedin.com/shareArticle?mini=true&url=${getSpecieUrl(artwork.name)}/&title=Look%20at%20this%20cool%20CSS%20art%20of%20an%20endangered%20specie&summary=&source=`} >
-                                            <a target="_blank" rel="noopenner noreferrer">
-                                                <img src="/images/linkedin.svg" />
-                                            </a>
-                                        </Link>
-                                        <Link href={`https://t.me/share/url?url=${getSpecieUrl(artwork.name)}/&text=Check this cool CSS art of an endangered specie.`} >
-                                            <a target="_blank" rel="noopenner noreferrer">
-                                                <img src="/images/telegram.svg" />
-                                            </a>
-                                        </Link>
-                                        <Link href={"#"}>
-                                            <a onClick={() => onClickCopytoClipBoard(artwork.name)}>
-                                                <img src="/images/copy-icon.svg" />
-                                            </a>
-                                        </Link>
-                                    </div>
+                                    <Link href={`https://www.facebook.com/sharer/sharer.php?u=${getSpecieUrl(artwork.name)}&amp;src=sdkpreparse`} >
+                                        <a target="_blank" rel="noopenner noreferrer">
+                                            <img src="/images/facebook.svg" />
+                                        </a>
+                                    </Link>
+                                    <Link href={`https://twitter.com/intent/tweet?url=${getSpecieUrl(artwork.name)}&text=Check out this cool CSS art of this endangered specie: ${artwork.specie[0].scientificName}.&hashtags=endangered,endangeredspecies,IUCN,iucnredlist`} >
+                                        <a target="_blank" rel="noopenner noreferrer">
+                                            <img src="/images/twitter.svg" />
+                                        </a>
+                                    </Link>
+                                    <Link href={`https://www.linkedin.com/shareArticle?mini=false&url=${getSpecieUrl(artwork.name)}`} >
+                                        <a target="_blank" rel="noopenner noreferrer">
+                                            <img src="/images/linkedin.svg" />
+                                        </a>
+                                    </Link>
+                                    <Link href={`https://t.me/share/url?url=${getSpecieUrl(artwork.name)}/&text=Check out this cool CSS art of this endangered specie: ${artwork.specie[0].scientificName}.`} >
+                                        <a target="_blank" rel="noopenner noreferrer">
+                                            <img src="/images/telegram.svg" />
+                                        </a>
+                                    </Link>
+                                    <Link href={"#"}>
+                                        <a onClick={() => onClickCopytoClipBoard(artwork.name)}>
+                                            <img src="/images/copy-icon.svg" />
+                                        </a>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </article>
