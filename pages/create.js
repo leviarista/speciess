@@ -1,47 +1,32 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Meta from '/components/shared/Meta'
 import styles from '../styles/modules/Explore.module.css'
 import Button from '/components/shared/Button'
 import Loader from "/components/shared/Loader";
 import InstructionsModal from "/components/shared/InstructionsModal";
-import { getSpecies } from "/util/api";
+import { getDangerLevelName } from "/util/getValues";
 
 function Create() {
 
-    let { species } = getSpecies();
+    const [species, setSpecies] = useState()
+    const [isLoading, setIsLoading] = useState(false)
 
-    const getDangerLevelName = (dangerLevel) => {
-        if (!dangerLevel) return "";
-        switch (dangerLevel.toLowerCase()) {
-            case "extinct":
-                return "EX";
-            case "extinct in the wild":
-                return "EW";
-            case "regionally extinct":
-                return "RE";
-            case "critically endangered":
-                return "CR";
-            case "endangered":
-                return "EN";
-            case "vulnerable":
-                return "VU";
-            case "conservation dependent":
-                return "CD";
-            case "near threatened":
-                return "NT";
-            case "least concern" || "lower risk/least concern":
-                return "LC";
-            case "data deficient":
-                return "DD";
-            case "not applicable":
-                return "NA";
-            case "not evaluated":
-                return "NE";
-            default:
-                return "NONE";
-        }
+    const getSpecies = () => {
+        setIsLoading(true);
+        let url = species ? "/api/species/" : "/api/species/withDefault";
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (species) setSpecies([...species, ...data])
+                else setSpecies(data)
+                setIsLoading(false)
+            })
     }
+
+    useEffect(() => {
+        getSpecies();
+    }, [])
 
     const onClickCopytoClipBoard = (artID) => {
         navigator.clipboard.writeText("https://ecostatsperu.netlify.app/");
@@ -72,6 +57,11 @@ function Create() {
     }
     const handleCloseModal = () => {
         setShowModal(false);
+    }
+
+    const loadMore = () => {
+        console.log("...")
+        getSpecies();
     }
 
     return (
@@ -110,7 +100,6 @@ function Create() {
                                                 }}
                                                 alt='preview'
                                             />
-
                                         </div>
                                         <div className={styles.cardTitle}>
                                             <b>{specie.scientificName}</b><br />
@@ -152,6 +141,25 @@ function Create() {
                                 </div>
                             </div>
                         )}
+                        <div className={styles.card + " center-content"} style={{ padding: "50px 0" }}>
+                            <div className={styles.cardImage}>
+                                <Link href="#">
+                                    <a
+                                        style={{ width: "100%", height: "100%", background: "var(--black)", color: "white", borderRadius: "4px" }}
+                                        className="center-content"
+                                        onClick={() => loadMore()}
+                                    >
+                                        {isLoading ? "Waiting ..." :
+                                            <>
+                                                Load more
+                                                <img src="/images/add-icon.svg" style={{ marginTop: "5px" }} />
+                                            </>
+                                        }
+                                    </a>
+                                </Link>
+                            </div>
+                        </div>
+
                     </div>
                 }
             </section >

@@ -5,6 +5,7 @@ import Button from '/components/shared/Button'
 import styles from '../../styles/modules/Artworks.module.css'
 import { apiRequest } from "/util/api";
 import { getSpecies } from "../../util/api";
+import { getDangerLevelName } from "/util/getValues";
 
 function Artwork(props) {
     const API_SERVER = process.env.NEXT_PUBLIC_API_SERVER;
@@ -20,38 +21,6 @@ function Artwork(props) {
         : "None";
 
     if (commonNames !== "") commonNames = commonNames.join(", ");
-
-    const getDangerLevelName = (dangerLevel) => {
-        if (!dangerLevel) return "";
-        switch (dangerLevel.toLowerCase()) {
-            case "extinct":
-                return "EX";
-            case "extinct in the wild":
-                return "EW";
-            case "regionally extinct":
-                return "RE";
-            case "critically endangered":
-                return "CR";
-            case "endangered":
-                return "EN";
-            case "vulnerable":
-                return "VU";
-            case "conservation dependent":
-                return "CD";
-            case "near threatened":
-                return "NT";
-            case "least concern" || "lower risk/least concern":
-                return "LC";
-            case "data deficient":
-                return "DD";
-            case "not applicable":
-                return "NA";
-            case "not evaluated":
-                return "NE";
-            default:
-                return "NONE";
-        }
-    }
 
     const onClickCopytoClipBoard = (name) => {
         const url = getSpecieUrl(name);
