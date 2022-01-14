@@ -44,7 +44,6 @@ function Create() {
     }
 
     const onClickCopytoClipBoard = (artID) => {
-        // navigator.clipboard.writeText(`http://localhost:3001/artworks/${specie.artID}`);
         navigator.clipboard.writeText("https://ecostatsperu.netlify.app/");
         alert("URL copied to clipboard");
     }

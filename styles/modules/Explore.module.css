@@ -37,7 +37,7 @@
 }
 
 .cardsContainerWrapper {
-  height: calc(100vh - 50px - 5px - 90px - 90px);
+  height: calc(100vh - 55px - 78px - 17px);
   overflow-y: auto;
   padding: 0 10%;
 }

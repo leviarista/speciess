@@ -63,12 +63,12 @@ function NavBar() {
                     </Link>
                 </li> */}
                 <li className="nav-github">
-                    <a href="https://github.com/leviarista/eco-stats-peru" target="_blank" rel="noopenner noreferrer" aria-label="View source on GitHub">
+                    <a href="https://github.com/leviarista/speciess" target="_blank" rel="noopenner noreferrer" aria-label="View source on GitHub">
                         <Image src={githubLogo} alt="GitHub Logo" />&nbsp;GitHub
                     </a>
                 </li>
             </ul>
-            <a href="https://github.com/leviarista/eco-stats-peru" target="_blank" rel="noopenner noreferrer" className="github-corner" aria-label="View source on GitHub">
+            <a href="https://github.com/leviarista/speciess" target="_blank" rel="noopenner noreferrer" className="github-corner" aria-label="View source on GitHub">
                 <GitHubCorner />
             </a>
             <a href="#" className="icon" onClick={toogleNav}>

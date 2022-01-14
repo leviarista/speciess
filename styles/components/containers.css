@@ -12,7 +12,7 @@
 }
 
 .full-height-container {
-    min-height: calc(100vh - 55px - 15px - 30px);
+    min-height: calc(100vh - 55px - 15px - 34px);
 }
 
 @media only screen and (max-width: 600px) {
