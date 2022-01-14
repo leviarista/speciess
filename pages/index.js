@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className='full-home-height-container'>
       <Meta
-        title={" "}
+        title={""}
         description={"Explore CSS art of endangered species"}
       />
 
