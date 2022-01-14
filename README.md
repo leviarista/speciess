@@ -1,4 +1,4 @@
-# <div align="center"> SPECIESS <br/> <br/> <img src="./public/images/speciess-logo.svg.svg"> </div>
+# <div align="center"> SPECIESS <br/> <br/> <img src="./public/images/speciess-logo.svg"> </div>
 
 > _This project is born as an initiative for the [Atlas MongoDB & Dev.to Hackaton](https://dev.to/devteam/announcing-the-mongodb-atlas-hackathon-on-dev-4b6m)._ 😄
 
