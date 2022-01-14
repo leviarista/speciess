@@ -65,7 +65,7 @@ function Explore() {
                                     <b>{getDangerLevelName(artwork.specie[0].redlistCategory)}</b>
                                 </div>
                                 <div className={styles.cardContent}>
-                                    <div className={styles.cardImage}>
+                                    <div className={styles.cardImage} style={{padding: "7px"}}>
                                         <img src={getSpeciePreviewUrl(artwork.name)} alt="preview" />
                                     </div>
                                     <div className={styles.cardTitle}>
