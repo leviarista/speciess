@@ -41,7 +41,7 @@ function InstructionsModal(props) {
                                                 </li>
                                             </ul>
                                             <pre style={{ backgroundColor: "var(--bg-default)", padding: "5px", maxWidth: "320px", borderRadius: "var(--border-radius)" }}>
-                                                {`{\n  "name": "mycssartname",\n  "github": "mygithubuser", \n  code: "${code}" \n}`}
+                                                {`{\n  "name": "mycssartname",\n  "github": "mygithubuser", \n  "code": "${code}" \n}`}
                                             </pre>
 
                                         </li>
